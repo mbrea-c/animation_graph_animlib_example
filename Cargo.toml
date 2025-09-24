@@ -1,0 +1,10 @@
+[package]
+name = "animation_graph_animlib_example"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = "0.16"
+bevy_animation_graph = "0.7"
+bevy_animation_graph_editor = "0.7"
+serde = { version = "1.0.193" }
