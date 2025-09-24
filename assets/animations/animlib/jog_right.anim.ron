@@ -1,0 +1,46 @@
+(
+    source: GltfNamed(
+        path: "models/AnimationLibrary_Godot.glb",
+        animation_name: "Jog_Right_Loop",
+    ),
+    skeleton: "skeletons/animlib.skn.ron",
+    event_tracks: {
+        "sync": (
+            name: "sync",
+            events: [
+                (
+                    id: "082b7e44-783a-4913-b363-4e3c57cd47e4",
+                    value: (
+                        event: StringId("right_foot_down"),
+                        start_time: 0.0,
+                        end_time: 0.2,
+                    ),
+                ),
+                (
+                    id: "58006448-80e3-4a82-ac20-c9f10e1398d5",
+                    value: (
+                        event: StringId("left_foot_reach"),
+                        start_time: 0.2,
+                        end_time: 0.4,
+                    ),
+                ),
+                (
+                    id: "92d03aeb-1b69-4233-802e-0c74300364c5",
+                    value: (
+                        event: StringId("left_foot_down"),
+                        start_time: 0.4,
+                        end_time: 0.7,
+                    ),
+                ),
+                (
+                    id: "e4626525-7cac-444f-a9ba-7ef0fd0be5b4",
+                    value: (
+                        event: StringId("right_foot_reach"),
+                        start_time: 0.7,
+                        end_time: 0.94,
+                    ),
+                ),
+            ],
+        ),
+    },
+)

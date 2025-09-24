@@ -1,0 +1,46 @@
+(
+    source: GltfNamed(
+        path: "models/AnimationLibrary_Godot.glb",
+        animation_name: "Jog_Bwd_Loop",
+    ),
+    skeleton: "skeletons/animlib.skn.ron",
+    event_tracks: {
+        "sync": (
+            name: "sync",
+            events: [
+                (
+                    id: "f0a59946-80a6-4504-b0f4-d2df5220c228",
+                    value: (
+                        event: StringId("right_foot_reach"),
+                        start_time: 0.0,
+                        end_time: 0.25,
+                    ),
+                ),
+                (
+                    id: "bffffd42-7ac6-4528-9eab-3b35404c8e8e",
+                    value: (
+                        event: StringId("right_foot_down"),
+                        start_time: 0.25,
+                        end_time: 0.45,
+                    ),
+                ),
+                (
+                    id: "c69d5946-d0a4-44f3-b5d2-14bddcbd77ed",
+                    value: (
+                        event: StringId("left_foot_reach"),
+                        start_time: 0.45,
+                        end_time: 0.71,
+                    ),
+                ),
+                (
+                    id: "4d0d1753-f2a6-40f6-88b3-f6b12d32839e",
+                    value: (
+                        event: StringId("left_foot_down"),
+                        start_time: 0.71,
+                        end_time: 0.94,
+                    ),
+                ),
+            ],
+        ),
+    },
+)

@@ -1,0 +1,400 @@
+(
+    nodes: [
+        (
+            name: "jog_left",
+            inner: {
+                "bevy_animation_graph::nodes::clip_node::ClipNode": (
+                    clip: "animations/animlib/jog_left.anim.ron",
+                    override_duration: None,
+                    override_interpolation: None,
+                ),
+            },
+        ),
+        (
+            name: "jog_fwd",
+            inner: {
+                "bevy_animation_graph::nodes::clip_node::ClipNode": (
+                    clip: "animations/animlib/jog_fwd.anim.ron",
+                    override_duration: None,
+                    override_interpolation: None,
+                ),
+            },
+        ),
+        (
+            name: "loop",
+            inner: {
+                "bevy_animation_graph::nodes::loop_node::LoopNode": (
+                    interpolation_period: 0.0,
+                ),
+            },
+        ),
+        (
+            name: "jog_right",
+            inner: {
+                "bevy_animation_graph::nodes::clip_node::ClipNode": (
+                    clip: "animations/animlib/jog_right.anim.ron",
+                    override_duration: None,
+                    override_interpolation: None,
+                ),
+            },
+        ),
+        (
+            name: "blend_space",
+            inner: {
+                "bevy_animation_graph::nodes::blend_space_node::BlendSpaceNode": (
+                    mode: LinearizedInterpolate,
+                    sync_mode: EventTrack("sync"),
+                    points: [
+                        (
+                            id: "right",
+                            point: (1.0, 0.0),
+                        ),
+                        (
+                            id: "back",
+                            point: (0.0, -1.0),
+                        ),
+                        (
+                            id: "fwd",
+                            point: (0.0, 1.0),
+                        ),
+                        (
+                            id: "left",
+                            point: (-1.0, 0.0),
+                        ),
+                    ],
+                    triangulation: (
+                        triangles: [
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (1.0, 0.0),
+                                        id: Index(0),
+                                    ),
+                                    q: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((-0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (1.0, 0.0),
+                                        id: Index(0),
+                                    ),
+                                    q: (
+                                        val: (0.0, -1.0),
+                                        id: Index(1),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (0.0, -1.0),
+                                        id: Index(1),
+                                    ),
+                                    q: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((-0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    q: (
+                                        val: (1.0, 0.0),
+                                        id: Index(0),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (0.0, -1.0),
+                                        id: Index(1),
+                                    ),
+                                    q: (
+                                        val: (1.0, 0.0),
+                                        id: Index(0),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (1.0, 0.0),
+                                        id: Index(0),
+                                    ),
+                                    q: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((-0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    q: (
+                                        val: (0.0, -1.0),
+                                        id: Index(1),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((0.0, -0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (0.0, -1.0),
+                                        id: Index(1),
+                                    ),
+                                    q: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((-0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (0.0, -1.0),
+                                        id: Index(1),
+                                    ),
+                                    q: (
+                                        val: (1.0, 0.0),
+                                        id: Index(0),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (1.0, 0.0),
+                                        id: Index(0),
+                                    ),
+                                    q: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((-0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    q: (
+                                        val: (0.0, -1.0),
+                                        id: Index(1),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((0.0, -0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (0.0, -1.0),
+                                        id: Index(1),
+                                    ),
+                                    q: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((-0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (0.0, -1.0),
+                                        id: Index(1),
+                                    ),
+                                    q: (
+                                        val: (1.0, 0.0),
+                                        id: Index(0),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (1.0, 0.0),
+                                        id: Index(0),
+                                    ),
+                                    q: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((-0.0, 0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                            (
+                                triangle: (
+                                    p: (
+                                        val: (0.0, 1.0),
+                                        id: Index(2),
+                                    ),
+                                    q: (
+                                        val: (0.0, -1.0),
+                                        id: Index(1),
+                                    ),
+                                    r: (
+                                        val: (-1.0, 0.0),
+                                        id: Index(3),
+                                    ),
+                                ),
+                                circumcenter: Some((0.0, -0.0)),
+                                circumradius: Some(1.0),
+                            ),
+                        ],
+                    ),
+                ),
+            },
+        ),
+        (
+            name: "jog_back",
+            inner: {
+                "bevy_animation_graph::nodes::clip_node::ClipNode": (
+                    clip: "animations/animlib/jog_back.anim.ron",
+                    override_duration: None,
+                    override_interpolation: None,
+                ),
+            },
+        ),
+    ],
+    edges_inverted: {
+        NodeData("blend_space", "events back"): NodeData("jog_back", "events"),
+        NodeData("blend_space", "pose left"): NodeData("jog_left", "pose"),
+        NodeData("blend_space", "pose right"): NodeData("jog_right", "pose"),
+        NodeTime("blend_space", "time fwd"): NodeTime("jog_fwd"),
+        NodeTime("blend_space", "time back"): NodeTime("jog_back"),
+        NodeData("loop", "pose"): NodeData("blend_space", "pose"),
+        OutputData("pose"): NodeData("loop", "pose"),
+        NodeData("blend_space", "events right"): NodeData("jog_right", "events"),
+        OutputTime: NodeTime("loop"),
+        NodeData("blend_space", "events left"): NodeData("jog_left", "events"),
+        NodeData("blend_space", "pose fwd"): NodeData("jog_fwd", "pose"),
+        NodeTime("blend_space", "time left"): NodeTime("jog_left"),
+        NodeData("blend_space", "events fwd"): NodeData("jog_fwd", "events"),
+        NodeData("blend_space", "pose back"): NodeData("jog_back", "pose"),
+        NodeData("blend_space", "position"): InputData("position"),
+        NodeTime("blend_space", "time right"): NodeTime("jog_right"),
+        NodeTime("loop", "time"): NodeTime("blend_space"),
+    },
+    default_parameters: {
+        "position": Vec2((0.2, 0.3)),
+    },
+    input_times: {},
+    output_parameters: {
+        "pose": Pose,
+    },
+    output_time: Some(()),
+    extra: (
+        node_positions: {
+            "jog_left": (225.23077, 148.61539),
+            "jog_fwd": (222.46161, -20.307678),
+            "loop": (649.84607, 127.38463),
+            "jog_right": (226.15381, 323.0769),
+            "blend_space": (454.1538, 126.46152),
+            "jog_back": (224.30768, 506.7693),
+        },
+        input_position: (226.15378, -203.07698),
+        output_position: (842.76935, 127.3846),
+        input_param_order: {
+            "position": 0,
+        },
+        input_time_order: {},
+        output_data_order: {
+            "pose": 0,
+        },
+        output_pose_order: {},
+    ),
+)
