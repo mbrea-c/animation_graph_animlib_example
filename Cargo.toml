@@ -7,4 +7,5 @@ edition = "2024"
 bevy = "0.16"
 bevy_animation_graph = "0.7"
 bevy_animation_graph_editor = "0.7"
-serde = { version = "1.0.193" }
+
+serde = { version = "=1.0.197" }
